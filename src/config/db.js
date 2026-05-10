@@ -5,6 +5,10 @@ const connectDB = async (uri) => {
     throw new Error('MONGODB_URI is required');
   }
 
+  if (mongoose.connection.readyState === 1) {
+    return;
+  }
+
   await mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
