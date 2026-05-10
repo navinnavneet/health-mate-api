@@ -28,3 +28,4 @@ Simple backend for signup/login using Express, MongoDB, and JWT.
 - Passwords are hashed with `bcryptjs`
 - JWT token is returned on successful auth
 - Add protected routes in `src/routes` using JWT middleware later
+- H
